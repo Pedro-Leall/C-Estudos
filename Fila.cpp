@@ -13,11 +13,11 @@ int inicio = -1;
 int fim = -1;
 int tam = 5;
 
-//sess„o de prototipaÁ„o de funÁıes
+//sess√£o de prototipa√ß√£o de fun√ß√µes
 void Enqueue(int);//inserir elemento
 int Dequeue();//retira um elemento da fila
 int isFull();//retotna 1 se a fila estiver cheia
-int isEmpty();//retorna 1 se a fila est· vazia
+int isEmpty();//retorna 1 se a fila est√° vazia
 void Imprimirfila();
 
 
@@ -45,11 +45,11 @@ main()
 }//fim do main
 
 
-//funÁ„o para inserir um elemento na fila
+//fun√ß√£o para inserir um elemento na fila
 void Enqueue(int elem)
 {
 	if(isFull() == 1){
-		puts("\nA fila est· cheia");
+		puts("\nA fila est√° cheia");
 	}
 	else
 	{
@@ -66,14 +66,14 @@ void Enqueue(int elem)
 	}
 };//fim enqueue
 
-//funÁ„o que retira um elemento da fila
+//fun√ß√£o que retira um elemento da fila
 
 int Dequeue()
 {
 	int elem;
 	if(isEmpty() == 1) 
 	{
-		printf("\nA fila est· v·zia");
+		printf("\nA fila est√° v√°zia");
 		return -1;
 	}
 	else
@@ -92,7 +92,7 @@ int Dequeue()
 	}
 };//fim Dequeue
 
-//funÁ„o para verificar se a fila est· cheia
+//fun√ß√£o para verificar se a fila est√° cheia
 int isFull()
 {
 	if((inicio == (fim+1)%tam) || (inicio == 0 && fim == tam-1))
@@ -105,7 +105,7 @@ int isFull()
 	}
 };//Fim isFull
 
-//funÁ„o para verificar se a fila est· vazia
+//fun√ß√£o para verificar se a fila est√° vazia
 int isEmpty()
 {
 	if(inicio == -1)
@@ -118,18 +118,18 @@ int isEmpty()
 	}
 };// fim do isempty
 
-//funÁ„o para imprimir a fila
+//fun√ß√£o para imprimir a fila
 
 void Imprimirfila()
 {
 	int i;
 	if(isEmpty() == 1)
 	{
-		puts("Est· vazia");
+		puts("Est√° vazia");
 	}
 	else
 	{
-		puts("Conte˙do da FIFO: ");
+		puts("Conte√∫do da FIFO: ");
 		for(i = inicio; i != fim; i = (i+1)%tam)
 			printf("%d |", itens[i]);
 	}
